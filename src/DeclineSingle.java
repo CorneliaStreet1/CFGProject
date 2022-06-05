@@ -43,9 +43,9 @@ public class DeclineSingle {
         //删去单生成式
         for(int i=mark.size()-1;i>-1;i--){
             ///////////////???????????
-            /*int a=mark.get(i);
-            cfg.getProduction().remove(a);*/
-            cfg.getProduction().remove(mark.get(i));
+            int a=mark.get(i);
+            cfg.getProduction().remove(a);
+            /*cfg.getProduction().remove(mark.get(i));*/
 
         }
     }
