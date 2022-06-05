@@ -19,6 +19,10 @@ public class CFGInput {
         return Start;
     }
 
+    public void setStart(String Start){
+        this.Start=Start;
+    }
+
     public ArrayList<String> getNonTerminal() {
         return NonTerminal;
     }
@@ -88,6 +92,8 @@ public class CFGInput {
     public static void main(String[] args) {
         CFGInput cfgInput = new CFGInput();
         cfgInput.MainInterface();
-        //System.out.println(cfgInput);
+        new DeclineEpsilon(cfgInput).run();
+        new DeclineSingle(cfgInput).run();
+        System.out.println(cfgInput);
     }
 }
