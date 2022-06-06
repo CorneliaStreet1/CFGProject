@@ -94,6 +94,8 @@ public class CFGInput {
         cfgInput.MainInterface();
         new DeclineEpsilon(cfgInput).run();
         new DeclineSingle(cfgInput).run();
+        new DelNonGenerate(cfgInput).run();
+        new DelNonArrival(cfgInput).run();
         System.out.println(cfgInput);
     }
 }
