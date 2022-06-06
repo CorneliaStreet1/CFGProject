@@ -42,15 +42,10 @@ public class DeclineSingle {
         }
         //删去单生成式
         for(int i=mark.size()-1;i>-1;i--){
-            ///////////////???????????
-            int a=mark.get(i);
-            cfg.getProduction().remove(a);
-            /*cfg.getProduction().remove(mark.get(i));*/
-
+            cfg.getProduction().remove((int)mark.get(i));
         }
     }
     //增加生成式让语言不变
-    //////////要考虑重复？
     public void newSingle(){
         //非终结符号i和非终结符号j
         for(int j=0;j<cfg.getNonTerminal().size();j++){
